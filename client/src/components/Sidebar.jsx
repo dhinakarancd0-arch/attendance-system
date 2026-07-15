@@ -99,9 +99,9 @@ function Sidebar({ onLogout }) {
             new Date().toISOString().split("T")[0];
 
           window.open(
-            `http://localhost:5000/api/attendance/export/${today}`,
-            "_blank"
-          );
+             `https://attendance-system-bozk.onrender.com/api/attendance/export/${today}`,
+              "_blank"
+           );
         }}
       >
         <span

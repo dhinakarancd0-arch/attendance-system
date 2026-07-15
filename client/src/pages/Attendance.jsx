@@ -116,8 +116,8 @@ function Attendance() {
             startIcon={<Download />}
             onClick={() => {
               window.open(
-                `http://localhost:5000/api/attendance/export/${date}`,
-                "_blank"
+             `https://attendance-system-bozk.onrender.com/api/attendance/export/${today}`,
+              "_blank"
               );
             }}
           >
