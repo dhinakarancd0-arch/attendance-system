@@ -1,0 +1,43 @@
+.home-page {
+  min-height: 100vh;
+}
+
+.hero-card {
+  transition: all 0.3s ease;
+}
+
+.hero-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card {
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+}
+
+@media (max-width: 900px) {
+  h3 {
+    font-size: 2rem !important;
+  }
+
+  .MuiPaper-root {
+    padding: 30px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  h3 {
+    font-size: 1.7rem !important;
+  }
+
+  .MuiButton-root {
+    width: 100%;
+  }
+
+  .MuiPaper-root {
+    border-radius: 20px !important;
+  }
+}

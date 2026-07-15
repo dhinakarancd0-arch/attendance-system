@@ -1,8 +1,27 @@
 const express = require("express");
 const router = express.Router();
 
-const { markAttendance } = require("../controllers/attendanceController");
+const {
+  markAttendance,
+  getTodayAttendance,
+  getAttendanceByDate,
+  exportAttendanceExcel,
+  getReportStats,
+} = require("../controllers/attendanceController");
 
+// Mark attendance
 router.post("/mark", markAttendance);
+
+// Today's attendance
+router.get("/today", getTodayAttendance);
+
+// Attendance by date
+router.get("/date/:date", getAttendanceByDate);
+
+// Reports statistics
+router.get("/report-stats", getReportStats);
+
+// Export attendance to Excel
+router.get("/export/:date", exportAttendanceExcel);
 
 module.exports = router;
