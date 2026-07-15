@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import api from "../services/api";
 import "../styles/MemberLogin.css";
 
 function MemberLogin() {
@@ -13,13 +13,10 @@ function MemberLogin() {
 
   const verifyStudent = async () => {
     try {
-      const res = await axios.post(
-        "http://localhost:5000/api/students/verify",
-        {
-          registerNumber,
-          dob,
-        }
-      );
+      const res = await api.post("/students/verify", {
+        registerNumber,
+        dob,
+      });
 
       setStudent(res.data.student);
       setMessage("");
@@ -33,12 +30,9 @@ function MemberLogin() {
 
   const markAttendance = async () => {
     try {
-      const res = await axios.post(
-        "http://localhost:5000/api/attendance/mark",
-        {
-          registerNumber: student.registerNumber,
-        }
-      );
+      const res = await api.post("/attendance/mark", {
+        registerNumber: student.registerNumber,
+      });
 
       setAttendanceMessage(res.data.message);
       setAttendanceSuccess(true);
@@ -58,7 +52,7 @@ function MemberLogin() {
           alt="Sankara"
           className="member-logo"
         />
-         
+
         <h1>Sankara Educational Institutions</h1>
 
         <p className="sub-title">
