@@ -1,0 +1,20 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-card {
+  width: 480px;
+  padding: 50px !important;
+  border-radius: 24px !important;
+}
+
+@media (max-width: 600px) {
+  .login-card {
+    width: 95%;
+    padding: 30px !important;
+  }
+}
